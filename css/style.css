@@ -78,6 +78,8 @@ header .container {
 }
 
 .logo-header {
+  display: inline-block;
+  padding: 15px 0;
   color: var(--accent-color-primary);
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -98,7 +100,7 @@ header .container {
 }
 
 .header-nav-link {
-  display: block;
+  display: inline-block;
   position: relative;
   color: var(--title-text-color);
   text-decoration: none;
@@ -110,7 +112,7 @@ header .container {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   height: 5px;
   background-color: var(--accent-color-primary);
@@ -142,11 +144,13 @@ header .container {
 .header-contacts {
   display: flex;
   align-items: center;
+  padding: 5px 0;
 }
 
 .header-contacts-link {
   display: flex;
   align-items: center;
+  padding: 24px 0;
   color: var(--primary-text-color);
   text-decoration: none;
   transition: color 250ms var(--time-function);
@@ -288,7 +292,9 @@ header .container {
 
 .about-us-description {
   position: absolute;
-
+   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 70px;
   bottom: 0;
@@ -300,7 +306,6 @@ header .container {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   text-transform: uppercase;
   margin-top: 27px;
   margin-bottom: 27px;
@@ -462,7 +467,7 @@ header .container {
 }
 
 .footer-section-address {
-  margin-right: 86px;
+  margin-right: 70px;
 }
 
 .logo-footer {
@@ -569,6 +574,7 @@ address {
   font-weight:500;
   font-size:16px;
   line-height:1.25;
+  color: var(--primary-text-color);
   background-color: transparent;
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -614,15 +620,20 @@ address {
 
 /*Portfolio buttons*/
 
-.portfolio-button {
-  display: flex;
-  justify-content: center;
+.portfolio-button-item{
   margin-bottom: 50px;
 }
 
 .portfolio-button-item:not(:last-child) {
   margin-right: 8px;
 }
+
+.portfolio-button {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 .portfolio-button-primary {
   font-family: inherit;
@@ -747,6 +758,7 @@ address {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  transform: opacity 250ms var(--time-function);
 }
 
 .backdrop.is-hidden {
@@ -760,8 +772,8 @@ address {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 527px;
-  height: 580px;
+  width: 528px;
+  height: 581px;
   background-color: var(--accent-color-secondary);
   border: 1px solid rgba(0, 0, 0, 0, 1);
   border-radius: 2px;
@@ -801,7 +813,8 @@ address {
 }
 
 .form-title {
-  margin: 0 auto 12px auto;
+  margin-bottom:12px;
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -846,6 +859,7 @@ address {
   height: 120px;
   resize: none;
   padding: 12px 16px;
+  margin-top:4px;
   font-size: 12px;
   line-height: 1.16;
   color: rgba(117, 117, 117, 0.5);
@@ -860,10 +874,13 @@ address {
   border-color: var(--accent-color-primary);
 }
 
-.form-policy {
-  font-size: 14px;
-  line-height: 1.71;
+.policy {
+  display:flex;
+  justify-content:center;
+  text-align: center;
+  margin-bottom: 30px;
 }
+
 
 .form-policy-link {
   color: var(--accent-color-primary);
@@ -874,7 +891,6 @@ address {
   height: 15px;
   width: 15px;
   border: 2px solid #212121;
-  border-radius: 4px;
 }
 
 .checkbox {
@@ -895,7 +911,8 @@ address {
   display: block;
   width: 200px;
   height: 50px;
-  margin: 30px auto 40px auto;
+  margin-right: auto;
+  margin-left:auto;
   padding: 10px 55px;
   background-color: var(--accent-color-primary);
   color: var(--accent-color-secondary);
